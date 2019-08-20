@@ -23,7 +23,6 @@
             ]);
 
             function clickAddBtnInToolBar() {
-                // formWin.show();
                 var newRecord = new gridRow({
                     id: '',
                     name: '',
@@ -111,62 +110,6 @@
                 }
             }
 
-            // var tableForm = new Ext.FormPanel({
-            //     labelWidth: 75,
-            //     frame: true,
-            //     width: 300,
-            //     id: "tableForm",
-            //     defaults: {
-            //         width: 200,
-            //         allowBlank: false,
-            //         labelSeparator: '<span style="color:red">*</span>',
-            //     },
-            //     defaultType: 'textfield',
-            //     bodyStyle: 'padding:5 5 0 5',
-            //     items: [{
-            //         id: 'id',
-            //         fieldLabel: 'ID',
-            //         name: 'id'
-            //     }, {
-            //         id: 'name',
-            //         fieldLabel: 'Name',
-            //         name: 'name'
-            //     }, {
-            //         id: 'className',
-            //         fieldLabel: 'Class Name',
-            //         name: 'className'
-            //     }, {
-            //         id: 'sex',
-            //         xtype: 'comboBox',
-            //         fieldLabel: 'Sex',
-            //         name: 'sex',
-            //         mode: 'local',
-            //         store: new Ext.data.ArrayStore({
-            //             id: 0,
-            //             fields: ['sex', 'sex'],
-            //             data: [['Male', 'Male'], ['Female', 'Female']]
-            //         }),
-            //         valueField: 'sex',
-            //         displayField: 'sex'
-            //     }, {
-            //         id: '',
-            //         xtype: 'dateField',
-            //     }]
-            // });
-
-            // var formWin = new Ext.Window({
-            //     title: "Add",
-            //     id: 'formWin',
-            //     closeAction: 'hide',
-            //     draggable: false,
-            //     height: 300,
-            //     width: 400,
-            //     layout: "fit",
-            //     modal: true,
-            //     resizable: false,
-            //     items: [tableForm]
-            // });
-
             const checkboxModel = new Ext.grid.CheckboxSelectionModel({
                 listeners: {
                     'rowselect': function (selectionModel, rowIndex, row) {
@@ -246,7 +189,7 @@
                         })
                     )
                 }, {
-                    header: 'Sex', 
+                    header: 'Sex',
                     dataIndex: 'sex',
                     editor: new Ext.grid.GridEditor(
                         new Ext.form.ComboBox({
@@ -262,7 +205,7 @@
                         })
                     )
                 }, {
-                    header: 'Birthday', 
+                    header: 'Birthday',
                     dataIndex: 'birthday',
                     renderer: Ext.util.Format.dateRenderer('Y-m-d'),
                     editor: new Ext.grid.GridEditor(
